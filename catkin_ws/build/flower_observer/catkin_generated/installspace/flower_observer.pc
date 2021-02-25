@@ -1,0 +1,8 @@
+prefix=/home/bernardo/courses/rlc/catkin_ws/install
+
+Name: flower_observer
+Description: Description of flower_observer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

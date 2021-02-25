@@ -1,0 +1,2 @@
+flower_observer:realsense_gazebo_plugin:simulator-greenhouse
+-DCATKIN_DEVEL_PREFIX=/home/bernardo/courses/rlc/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bernardo/courses/rlc/catkin_ws/install -G Unix Makefiles

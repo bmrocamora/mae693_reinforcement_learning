@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bernardo/courses/rlc/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bernardo/courses/rlc/catkin_ws/build
+CMAKE_BINARY_DIR = /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,6 +79,28 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -113,38 +135,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/courses/rlc/catkin_ws/build/CMakeFiles /home/bernardo/courses/rlc/catkin_ws/build/realsense_gazebo_plugin/CMakeFiles/progress.marks
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/courses/rlc/catkin_ws/build/CMakeFiles 0
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/CMakeFiles /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/realsense_gazebo_plugin/CMakeFiles/progress.marks
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/clean
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,52 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/preinstall
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/preinstall
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/rule:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/rule
+.PHONY : realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/rule
+
+# Convenience name for target.
+realsense_gazebo_gyro_sensor: realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/rule
+
+.PHONY : realsense_gazebo_gyro_sensor
+
+# fast build rule for target.
+realsense_gazebo_gyro_sensor/fast:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/build
+.PHONY : realsense_gazebo_gyro_sensor/fast
+
+# Convenience name for target.
+realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/rule:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/rule
+.PHONY : realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/rule
+
+# Convenience name for target.
+realsense_gazebo_accel_sensor: realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/rule
+
+.PHONY : realsense_gazebo_accel_sensor
+
+# fast build rule for target.
+realsense_gazebo_accel_sensor/fast:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/build
+.PHONY : realsense_gazebo_accel_sensor/fast
+
+# Convenience name for target.
 realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/rule:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/rule
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/rule
 .PHONY : realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/rule
 
 # Convenience name for target.
@@ -179,7 +209,7 @@ realsense_gazebo_plugin: realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plu
 
 # fast build rule for target.
 realsense_gazebo_plugin/fast:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build
 .PHONY : realsense_gazebo_plugin/fast
 
 src/RealSensePlugin.o: src/RealSensePlugin.cpp.o
@@ -188,7 +218,7 @@ src/RealSensePlugin.o: src/RealSensePlugin.cpp.o
 
 # target to build an object file
 src/RealSensePlugin.cpp.o:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o
 .PHONY : src/RealSensePlugin.cpp.o
 
 src/RealSensePlugin.i: src/RealSensePlugin.cpp.i
@@ -197,7 +227,7 @@ src/RealSensePlugin.i: src/RealSensePlugin.cpp.i
 
 # target to preprocess a source file
 src/RealSensePlugin.cpp.i:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.i
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.i
 .PHONY : src/RealSensePlugin.cpp.i
 
 src/RealSensePlugin.s: src/RealSensePlugin.cpp.s
@@ -206,8 +236,62 @@ src/RealSensePlugin.s: src/RealSensePlugin.cpp.s
 
 # target to generate assembly for a file
 src/RealSensePlugin.cpp.s:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.s
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.s
 .PHONY : src/RealSensePlugin.cpp.s
+
+src/gazebo_ros_accel_sensor.o: src/gazebo_ros_accel_sensor.cpp.o
+
+.PHONY : src/gazebo_ros_accel_sensor.o
+
+# target to build an object file
+src/gazebo_ros_accel_sensor.cpp.o:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/src/gazebo_ros_accel_sensor.cpp.o
+.PHONY : src/gazebo_ros_accel_sensor.cpp.o
+
+src/gazebo_ros_accel_sensor.i: src/gazebo_ros_accel_sensor.cpp.i
+
+.PHONY : src/gazebo_ros_accel_sensor.i
+
+# target to preprocess a source file
+src/gazebo_ros_accel_sensor.cpp.i:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/src/gazebo_ros_accel_sensor.cpp.i
+.PHONY : src/gazebo_ros_accel_sensor.cpp.i
+
+src/gazebo_ros_accel_sensor.s: src/gazebo_ros_accel_sensor.cpp.s
+
+.PHONY : src/gazebo_ros_accel_sensor.s
+
+# target to generate assembly for a file
+src/gazebo_ros_accel_sensor.cpp.s:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_accel_sensor.dir/src/gazebo_ros_accel_sensor.cpp.s
+.PHONY : src/gazebo_ros_accel_sensor.cpp.s
+
+src/gazebo_ros_gyro_sensor.o: src/gazebo_ros_gyro_sensor.cpp.o
+
+.PHONY : src/gazebo_ros_gyro_sensor.o
+
+# target to build an object file
+src/gazebo_ros_gyro_sensor.cpp.o:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/src/gazebo_ros_gyro_sensor.cpp.o
+.PHONY : src/gazebo_ros_gyro_sensor.cpp.o
+
+src/gazebo_ros_gyro_sensor.i: src/gazebo_ros_gyro_sensor.cpp.i
+
+.PHONY : src/gazebo_ros_gyro_sensor.i
+
+# target to preprocess a source file
+src/gazebo_ros_gyro_sensor.cpp.i:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/src/gazebo_ros_gyro_sensor.cpp.i
+.PHONY : src/gazebo_ros_gyro_sensor.cpp.i
+
+src/gazebo_ros_gyro_sensor.s: src/gazebo_ros_gyro_sensor.cpp.s
+
+.PHONY : src/gazebo_ros_gyro_sensor.s
+
+# target to generate assembly for a file
+src/gazebo_ros_gyro_sensor.cpp.s:
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_gyro_sensor.dir/src/gazebo_ros_gyro_sensor.cpp.s
+.PHONY : src/gazebo_ros_gyro_sensor.cpp.s
 
 src/gazebo_ros_realsense.o: src/gazebo_ros_realsense.cpp.o
 
@@ -215,7 +299,7 @@ src/gazebo_ros_realsense.o: src/gazebo_ros_realsense.cpp.o
 
 # target to build an object file
 src/gazebo_ros_realsense.cpp.o:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o
 .PHONY : src/gazebo_ros_realsense.cpp.o
 
 src/gazebo_ros_realsense.i: src/gazebo_ros_realsense.cpp.i
@@ -224,7 +308,7 @@ src/gazebo_ros_realsense.i: src/gazebo_ros_realsense.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_realsense.cpp.i:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.i
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.i
 .PHONY : src/gazebo_ros_realsense.cpp.i
 
 src/gazebo_ros_realsense.s: src/gazebo_ros_realsense.cpp.s
@@ -233,7 +317,7 @@ src/gazebo_ros_realsense.s: src/gazebo_ros_realsense.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_realsense.cpp.s:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.s
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(MAKE) -f realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/build.make realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.s
 .PHONY : src/gazebo_ros_realsense.cpp.s
 
 # Help Target
@@ -244,15 +328,23 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... test"
+	@echo "... realsense_gazebo_gyro_sensor"
+	@echo "... realsense_gazebo_accel_sensor"
 	@echo "... realsense_gazebo_plugin"
 	@echo "... src/RealSensePlugin.o"
 	@echo "... src/RealSensePlugin.i"
 	@echo "... src/RealSensePlugin.s"
+	@echo "... src/gazebo_ros_accel_sensor.o"
+	@echo "... src/gazebo_ros_accel_sensor.i"
+	@echo "... src/gazebo_ros_accel_sensor.s"
+	@echo "... src/gazebo_ros_gyro_sensor.o"
+	@echo "... src/gazebo_ros_gyro_sensor.i"
+	@echo "... src/gazebo_ros_gyro_sensor.s"
 	@echo "... src/gazebo_ros_realsense.o"
 	@echo "... src/gazebo_ros_realsense.i"
 	@echo "... src/gazebo_ros_realsense.s"
@@ -267,6 +359,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bernardo/courses/rlc/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-prefix=/home/bernardo/courses/rlc/catkin_ws/install
+prefix=/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/install
 
 Name: realsense_gazebo_plugin
 Description: Description of realsense_gazebo_plugin

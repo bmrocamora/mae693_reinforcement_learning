@@ -1,0 +1,9 @@
+r_max: 1.2
+r_min: 0.3
+r_n: 7
+theta_max: 1.57079632679
+theta_min: -1.57079632679
+theta_n: 13
+phi_max: 1.57079632679
+phi_min: -1.57079632679
+phi_n: 13

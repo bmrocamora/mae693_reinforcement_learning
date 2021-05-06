@@ -1,0 +1,12 @@
+catkin_ws/build
+catkin_ws/devel
+catkin_ws/media
+catkin_ws/src/flower-pose
+catkin_ws/src/pollination-greenhouse-sim
+catkin_ws/src/realsense_gazebo_description
+catkin_ws/src/realsense_gazebo_plugin
+catkin_ws/bags/backup
+catkin_ws/bags/pcd
+catkin_ws/bags/pcd_full
+project/papers
+sarsop

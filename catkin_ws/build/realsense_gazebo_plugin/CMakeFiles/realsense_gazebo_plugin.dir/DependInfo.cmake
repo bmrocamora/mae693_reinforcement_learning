@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bernardo/courses/rlc/catkin_ws/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp" "/home/bernardo/courses/rlc/catkin_ws/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o"
-  "/home/bernardo/courses/rlc/catkin_ws/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp" "/home/bernardo/courses/rlc/catkin_ws/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o"
+  "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/realsense_gazebo_plugin/src/RealSensePlugin.cpp" "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o"
+  "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/realsense_gazebo_plugin/src/gazebo_ros_realsense.cpp" "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/realsense_gazebo_plugin/CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -31,13 +31,13 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/bernardo/courses/rlc/catkin_ws/src/realsense_gazebo_plugin/include"
+  "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/realsense_gazebo_plugin/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/gazebo-11"
   "/usr/include/bullet"
   "/usr/include/simbody"
-  "/usr/include/sdformat-9.4"
+  "/usr/include/sdformat-9.5"
   "/usr/include/ignition/math6"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
@@ -47,7 +47,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ignition/common3"
   "/usr/include/ignition/fuel_tools4"
   "/usr/include/eigen3"
-  "/usr/include/sdformat-9.4/sdf/.."
+  "/usr/include/sdformat-9.5/sdf/.."
   "/usr/include/ignition/cmake2"
   "/usr/include/uuid"
   )

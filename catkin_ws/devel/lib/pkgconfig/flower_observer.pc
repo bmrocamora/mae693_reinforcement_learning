@@ -1,8 +1,8 @@
-prefix=/home/bernardo/courses/rlc/catkin_ws/devel
+prefix=/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/devel
 
 Name: flower_observer
 Description: Description of flower_observer
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/flower_observer/include
 Libs: -L${prefix}/lib 
-Requires: 
+Requires: roscpp rospy geometry_msgs std_msgs gazebo_msgs tf2 tf2_ros

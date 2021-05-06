@@ -1,8 +1,8 @@
-# Install script for directory: /home/bernardo/courses/rlc/catkin_ws/src/flower_observer
+# Install script for directory: /home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/flower_observer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bernardo/courses/rlc/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bernardo/courses/rlc/catkin_ws/build/flower_observer/catkin_generated/installspace/flower_observer.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/flower_observer/catkin_generated/installspace/flower_observer.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flower_observer/cmake" TYPE FILE FILES
-    "/home/bernardo/courses/rlc/catkin_ws/build/flower_observer/catkin_generated/installspace/flower_observerConfig.cmake"
-    "/home/bernardo/courses/rlc/catkin_ws/build/flower_observer/catkin_generated/installspace/flower_observerConfig-version.cmake"
+    "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/flower_observer/catkin_generated/installspace/flower_observerConfig.cmake"
+    "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/build/flower_observer/catkin_generated/installspace/flower_observerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flower_observer" TYPE FILE FILES "/home/bernardo/courses/rlc/catkin_ws/src/flower_observer/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/flower_observer" TYPE FILE FILES "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/flower_observer/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/flower_observer" TYPE DIRECTORY FILES "/home/bernardo/courses/rlc/catkin_ws/src/flower_observer/include/flower_observer/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/flower_observer" TYPE DIRECTORY FILES "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/src/flower_observer/include/flower_observer/" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE)
 endif()
 

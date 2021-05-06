@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/bernardo/courses/rlc/catkin_ws/devel/lib/librealsense_gazebo_plugin.pdb"
-  "/home/bernardo/courses/rlc/catkin_ws/devel/lib/librealsense_gazebo_plugin.so"
+  "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/devel/lib/librealsense_gazebo_plugin.pdb"
+  "/home/bernardo/Documents/courses/mae693_rlc/catkin_ws/devel/lib/librealsense_gazebo_plugin.so"
   "CMakeFiles/realsense_gazebo_plugin.dir/src/RealSensePlugin.cpp.o"
   "CMakeFiles/realsense_gazebo_plugin.dir/src/gazebo_ros_realsense.cpp.o"
 )
